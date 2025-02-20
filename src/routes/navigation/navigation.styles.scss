@@ -1,0 +1,50 @@
+$gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1) 50%, rgba(253,29,29,1) 100%);
+
+.navbar { 
+    height: 80px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 50px; 
+    border-bottom: 1px solid;
+    background: linear-gradient(90deg, #2980B9 5%, #6DD5FA 50%, #FFFFFF 125%);
+    
+
+
+    .logo-container { 
+        // height: 100%; 
+        // width: 100%; 
+        // padding: 25px 0 0 25px;
+        display: flex;
+    } 
+
+ 
+    .nav-links-container { 
+        padding: 10px;
+        transition: all 1s ease-out;
+        text-decoration: none;
+        color: #111;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 12px;
+        display: flex;
+        
+    }     
+        
+        .nav-link { 
+            color: #95BCF9;
+            padding: 10px;
+            align-content: center;
+            margin: 5px;
+            text-decoration: none;
+            background: linear-gradient(90deg, #373B44 0%, #4286f4 125%);
+            transition: transform 1s ease-out;
+            cursor: pointer;
+            
+           
+            &:hover { 
+                transform: scale(1.1);
+            } 
+        }
+    }  
+    

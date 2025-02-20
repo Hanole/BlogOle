@@ -4,14 +4,13 @@ import { Fragment, useContext } from 'react';
 import './navigation.styles.scss';
 import { ReactComponent as PizzacatLogo } from '../../assets/pizzacatLogo.svg';
 import { UserContext } from '../../components/context/user.context';
-import { signOutUser } from '../../utils/firebase/firebase.utils';
 
+
+import SignOutButton from '../../components/alert/signout-button.component';
 import 'animate.css';
 
 const NavBar = () => {
     const { currentUser } = useContext(UserContext);
-    // console.log(currentUser);
-
     return (
       <Fragment>
         <div className='navbar'>
@@ -23,7 +22,7 @@ const NavBar = () => {
                     ABOUT ME
                 </Link>
                 {currentUser ? (
-                    <span className='nav-link' onClick={signOutUser}>SIGN OUT</span>
+                    <SignOutButton key={1}/>
                 ) : (
                     <Link className='nav-link' to='/auth'>
                         SIGN IN

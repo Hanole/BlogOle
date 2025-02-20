@@ -71,7 +71,11 @@ const firebaseConfig = {
     return await signInWithEmailAndPassword(auth, email, password);
   };
 
-  export const signOutUser = async () => await signOut(auth);
+  export const signOutUser = async () => {
+    console.log('Starting Firebase sign out...');
+    await signOut(auth);
+    console.log('Firebase sign out complete');
+  };
 
   export const onAuthStateChangedListener = (callback) =>
     onAuthStateChanged(auth, callback);

@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './routes/home/home.component';
 import NavBar from './routes/navigation/navigation.component.jsx';
 import Authentication from './routes/authentication/authentication.component.jsx';

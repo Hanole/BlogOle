@@ -51,3 +51,9 @@ $gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1
         }
     }  
     
+    .alert {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1050;
+      }

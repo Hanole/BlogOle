@@ -1,7 +1,9 @@
 import './category-item.styles.scss'
+import { Link, Links } from 'react-router';
+
 
 const CategoryItem = ({ category }) => {
-    const { imageUrl, title } = category;
+    const { imageUrl, title, direct } = category;
     return (
         <div className='category-container'>
             <div 
@@ -11,8 +13,9 @@ const CategoryItem = ({ category }) => {
                 }} 
             />
             <div className='category-body-container'>
+            <Link to={direct}>
                 <h2>{title}</h2>
-                <p>Look around</p>
+            </Link>
             </div>
       </div>
     )

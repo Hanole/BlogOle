@@ -3,16 +3,21 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { UserProvider } from './components/context/user.context';
+import { BooksProvider } from './components/context/books.context';
+
 
 import './index.scss';
 import App from './App';
+import Book from './routes/books/book.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <BooksProvider>
+          <App />
+        </BooksProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

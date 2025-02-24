@@ -1,3 +1,5 @@
+
+
 .category-container { 
     min-width: 30%; 
     height: 240px; 
@@ -35,6 +37,7 @@
             transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         } 
         .category-body-container { 
+            
             height: 90px; 
             padding: 0 25px; 
             display: flex; 
@@ -58,3 +61,7 @@
             } 
         } 
     }
+
+    a {
+        text-decoration: none;
+      }

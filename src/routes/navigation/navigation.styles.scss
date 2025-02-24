@@ -25,7 +25,6 @@ $gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1
     .nav-links-container { 
         padding: 10px;
         transition: all 1s ease-out;
-        text-decoration: none;
         color: #111;
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -39,7 +38,6 @@ $gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1
             padding: 10px;
             align-content: center;
             margin: 5px;
-            text-decoration: none;
             background: linear-gradient(90deg, #373B44 0%, #4286f4 125%);
             transition: transform 1s ease-out;
             cursor: pointer;

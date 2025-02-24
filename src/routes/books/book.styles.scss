@@ -1,6 +1,10 @@
 .books-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
-    row-gap: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 25px;
+    align-items: center;
+    margin: 10px;
+    
+    
+    // align-items: center;
 }

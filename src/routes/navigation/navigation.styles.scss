@@ -1,4 +1,38 @@
-$gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1) 50%, rgba(253,29,29,1) 100%);
+$base-color: #0F2027;
+$nicebrown: #170900;
+$niceblue: #2C5364;
+
+$gradientblue: linear-gradient(
+      0deg,
+      hsl(198deg 44% 11%) -1%,
+      hsl(201deg 44% 14%) -2%,
+      hsl(202deg 46% 17%) -1%,
+      hsl(205deg 47% 21%) -1%,
+      hsl(208deg 48% 24%) 0%,
+      hsl(210deg 49% 28%) 1%,
+      hsl(213deg 50% 31%) 3%,
+      hsl(215deg 51% 35%) 4%,
+      hsl(218deg 52% 38%) 6%,
+      hsl(220deg 53% 42%) 8%,
+      hsl(222deg 54% 45%) 11%,
+      hsl(225deg 55% 48%) 13%,
+      hsl(228deg 55% 52%) 16%,
+      hsl(230deg 56% 55%) 20%,
+      hsl(233deg 57% 59%) 23%,
+      hsl(235deg 59% 62%) 27%,
+      hsl(238deg 59% 65%) 32%,
+      hsl(240deg 60% 69%) 37%,
+      hsl(243deg 62% 72%) 43%,
+      hsl(245deg 63% 76%) 49%,
+      hsl(247deg 62% 79%) 56%,
+      hsl(251deg 64% 83%) 64%,
+      hsl(253deg 66% 86%) 74%,
+      hsl(254deg 66% 90%) 85%,
+      hsl(258deg 67% 93%) 100%
+    );
+
+
+
 
 .navbar { 
     height: 80px; 
@@ -7,7 +41,16 @@ $gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1
     justify-content: space-between; 
     margin-bottom: 50px; 
     border-bottom: 1px solid;
-    background: linear-gradient(90deg, #2980B9 5%, #6DD5FA 50%, #FFFFFF 125%);
+    background: linear-gradient(90deg, $niceblue 5%, $nicebrown 50%, $base-color 125%);
+    border-radius: 10px;
+
+
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+      rgba(240, 46, 170, 0.2) 15px 15px;
     
 
 
@@ -16,37 +59,32 @@ $gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1
         max-width:100%;
         // padding: 25px 0 0 25px;
         display: flex;
-        
+        position: absolute;
     } 
 
     
 
  
     .nav-links-container { 
-        padding: 10px;
-        transition: all 1s ease-out;
-        color: #111;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        font-size: 12px;
-        display: flex;
+      display: flex;
+      position: absolute;
+      right: 0;
+      padding: 10px;
         
     }     
         
-        .nav-link { 
-            color: #95BCF9;
-            padding: 10px;
-            align-content: center;
-            margin: 5px;
-            background: linear-gradient(90deg, #373B44 0%, #4286f4 125%);
-            transition: transform 1s ease-out;
-            cursor: pointer;
-            
-           
-            &:hover { 
-                transform: scale(1.1);
-            } 
-        }
+    //     .nav-link { 
+    //         color: #95BCF9;
+    //         padding: 10px;
+    //         align-content: center;
+    //         margin: 5px;
+    //         transition: transform 0.3s ease-out;
+    //         cursor: pointer;
+
+    //         &:hover { 
+    //             transform: scale(1.1);
+    //         } 
+    //     }
     }  
     
     .alert {
@@ -55,3 +93,145 @@ $gradienthue-nav: linear-gradient(90deg, rgba(236,255,0,1) 0%, rgba(215,24,137,1
         right: 20px;
         z-index: 1050;
       }
+
+///**** shit under**//
+
+
+      .wrapper {
+        display: flex;
+        perspective: 500px;
+        transform: rotatex(10deg);
+        animation: rotateAngle 6s linear infinite;
+        margin: auto;
+        width: auto;
+        color: black;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+       }
+       
+       .button1 {
+        display: block;
+        position: relative;
+        margin: 0.5em 0.5em;
+        padding: 0.2em 1em;
+        cursor: pointer;
+        background: #FFFFFF;
+        border: none;
+        border-radius: 0.4em;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 0.04em;
+        mix-blend-mode: color-dodge;
+        perspective: 500px;
+        transform-style: preserve-3d;
+        
+       }
+       
+       .button1::before, .button1::after {
+        --z: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        mix-blend-mode: inherit;
+        border-radius: inherit;
+        transform-style: preserve-3d;
+        transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+        
+       }
+       
+       .button1 span {
+        mix-blend-mode: none;
+        display: block;
+       }
+       
+       .button1::after {
+        background-color: #5D00FF;
+       }
+       
+       .button1::before {
+        background-color: #FF1731;
+       }
+       
+       .button1::hover {
+        background-color: #FFF65B;
+        transition: background 0.3s 0.1s;
+       }
+       
+       .button1:hover::before {
+        --z: 0.04;
+        animation: translateWobble 2.2s ease forwards;
+       }
+       
+       .button1:hover::after {
+        --z: -0.06;
+        animation: translateWobble 2.2s ease forwards;
+       }
+       
+       @keyframes rotateAngle {
+        0% {
+         transform: rotateY(0deg) rotateX(10deg);
+         -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+         animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+        }
+       
+        25% {
+         transform: rotateY(20deg) rotateX(10deg);
+        }
+       
+        50% {
+         transform: rotateY(0deg) rotateX(10deg);
+         -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+         animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+        }
+       
+        75% {
+         transform: rotateY(-20deg) rotateX(10deg);
+        }
+       
+        100% {
+         transform: rotateY(0deg) rotateX(10deg);
+        }
+       }
+       
+       @keyframes translateWobble {
+        0% {
+         opacity: 0;
+         transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+        }
+       
+        16% {
+         transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
+        }
+       
+        28% {
+         opacity: 1;
+         transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
+        }
+       
+        44% {
+         transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
+        }
+       
+        59% {
+         transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
+        }
+       
+        73% {
+         transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
+        }
+       
+        88% {
+         opacity: 1;
+         transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
+        }
+       
+        100% {
+         opacity: 1;
+         transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
+        }
+       }

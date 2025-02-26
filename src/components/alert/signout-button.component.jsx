@@ -10,7 +10,7 @@ const SignOutButton = ({ setShow }) => {
     }
   };
 
-  return <span className="nav-link" onClick={handleSignOut}>SIGN OUT</span>;
+  return <span className="nav-link button1" onClick={handleSignOut}>SIGN OUT</span>;
 };
 
 

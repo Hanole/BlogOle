@@ -2,10 +2,15 @@
 import { Outlet, Link } from 'react-router';
 import { Fragment, useContext, useState } from 'react';
 import './navigation.styles.scss';
+
+import ProfileIcon from '../../components/profile-icon/profile-icon.component';
+
 import { ReactComponent as PizzacatLogo } from '../../assets/pizzacatLogo.svg';
 import { UserContext } from '../../components/context/user.context';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+
+
 
 import SignOutButton from '../../components/alert/signout-button.component';
 import 'animate.css';
@@ -21,16 +26,19 @@ const NavBar = () => {
                 <PizzacatLogo className='logo' />
             </Link>
             <div className='nav-links-container'>
-                <Link className='nav-link' to='/about-me'>
+              <div className='wrapper'>
+                <Link className='nav-link button1' to='/about-me'>
                     ABOUT ME
                 </Link>
                 {currentUser ? (
                     <SignOutButton setShow={setShow}/>
                 ) : (
-                    <Link className='nav-link' to='/auth'>
+                    <Link className='nav-link button1' to='/auth'>
                         SIGN IN
                     </Link>
                 )}
+              </div>
+              <ProfileIcon />
             </div>
         </div>
 

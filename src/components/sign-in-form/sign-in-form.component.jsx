@@ -105,7 +105,7 @@ const SignInForm = () => {
                         Google sign in
                 </Button>
                 </div>
-                
+                <p style={{ padding: 50 }}>This function doesn't really make sense to have, but it is functioning</p>
             </form>
         </div>
     )

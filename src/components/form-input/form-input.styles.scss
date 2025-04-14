@@ -1,7 +1,10 @@
 $sub-color: grey; 
 $main-color: black; 
+$main-color2: white;
 
-@mixin shrinkLabel { top: -14px; font-size: 12px; color: $main-color; }
+
+
+@mixin shrinkLabel { top: -20px; font-size: 12px; color: $main-color2; }
 
 .group { 
     position: relative; 

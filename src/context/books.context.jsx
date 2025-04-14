@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-import BOOKS from '../../book-data.json';
+import BOOKS from '../book-data.json';
 
 
 

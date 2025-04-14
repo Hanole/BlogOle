@@ -3,35 +3,43 @@ $nicebrown: #170900;
 $niceblue: #2C5364;
 
 
-.book-wrapper {
-  width: 210px;
-  height: 500px;
+.product-wrapper {
+  width: 220px;
+  height: 450px;
   box-shadow: rgba(240, 46, 170, 0.4) 3px 3px, rgba(240, 46, 170, 0.3) 6px 6px,
   rgba(240, 46, 170, 0.2) 9px 9px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: rgba(0, 0, 0, 0.3);
   transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-
+ 
   &:hover {
     box-shadow: rgba(240, 46, 170, 0.4) 1px 1px, rgba(240, 46, 170, 0.3) 3px 3px,
   rgba(240, 46, 170, 0.2) 5px 5px;
   }
 }
   
-.book-card-container { 
-  padding: 3px;
-
+.product-card-container { 
+  margin: 3px;  
+  overflow: hidden; 
+  
+  
     img { 
         width: 100%; 
-        height: 320px;
+        height: 280px;
         object-fit: fill; 
         margin-bottom: 5px; 
         max-width: 100%;
+        transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        &:hover {
+          transform: scale(1.1); 
+          
+        }
+
 
     } 
 
-  .book-card-info {
+  .product-card-info {
     text-align: center;
     align-items: center;
     
@@ -41,10 +49,15 @@ $niceblue: #2C5364;
     }
   }
 
-  .bookbutton {
+  .productbutton {
     display: flex;
     margin: 5px;
     justify-content: center;
   }
 
 }
+
+
+
+
+

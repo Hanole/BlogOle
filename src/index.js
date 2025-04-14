@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { UserProvider } from './components/context/user.context';
-import { BooksProvider } from './components/context/books.context';
-
+import { UserProvider } from './context/user.context';
+import { BooksProvider } from './context/books.context';
+import { CartProvider } from './context/cart.context';
+import { ProductsProvider } from './context/products.context';
 
 import './index.scss';
 import App from './App';
@@ -15,9 +16,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
+        <ProductsProvider>
         <BooksProvider>
-          <App />
+          <CartProvider>
+           <App />
+          </CartProvider>
         </BooksProvider>
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

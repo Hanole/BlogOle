@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Abstract Composition",
+    "imageUrl": "https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 120.0
+  },
+  {
+    "id": 2,
+    "name": "Modern Oil Painting",
+    "imageUrl": "https://images.pexels.com/photos/1570779/pexels-photo-1570779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 250.0
+  },
+  {
+    "id": 3,
+    "name": "Colorful Graffiti Art",
+    "imageUrl": "https://images.pexels.com/photos/3095769/pexels-photo-3095769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 90.0
+  },
+  {
+    "id": 4,
+    "name": "Surreal Landscape",
+    "imageUrl": "https://images.pexels.com/photos/342002/pexels-photo-342002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 185.5
+  },
+  {
+    "id": 5,
+    "name": "Minimalist",
+    "imageUrl": "https://images.pexels.com/photos/3750893/pexels-photo-3750893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 60.0
+  },
+  {
+    "id": 6,
+    "name": "Expressionist Portrait",
+    "imageUrl": "https://images.pexels.com/photos/3326738/pexels-photo-3326738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 200.0
+  },
+  {
+    "id": 7,
+    "name": "Black and White Sketch",
+    "imageUrl": "https://images.pexels.com/photos/7784599/pexels-photo-7784599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 45.0
+  },
+  {
+    "id": 8,
+    "name": "Mixed Media Collage",
+    "imageUrl": "https://images.pexels.com/photos/4066761/pexels-photo-4066761.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 130.0
+  },
+  {
+    "id": 9,
+    "name": "Digital Illustration",
+    "imageUrl": "https://images.pexels.com/photos/11798029/pexels-photo-11798029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 75.0
+  },
+  {
+    "id": 10,
+    "name": "Canvas Splash Painting",
+    "imageUrl": "https://images.pexels.com/photos/7896729/pexels-photo-7896729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": 140.0
+  }
+]

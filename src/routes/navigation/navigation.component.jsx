@@ -3,10 +3,14 @@ import { Outlet, Link } from 'react-router';
 import { Fragment, useContext, useState } from 'react';
 import './navigation.styles.scss';
 
-import ProfileIcon from '../../components/profile-icon/profile-icon.component';
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
-import { ReactComponent as PizzacatLogo } from '../../assets/pizzacatLogo.svg';
-import { UserContext } from '../../components/context/user.context';
+
+import SvgIconPizzaCat from './../../assets/logocat'
+import { UserContext } from '../../context/user.context';
+import { CartContext } from '../../context/cart.context';
+
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 
@@ -18,12 +22,13 @@ import 'animate.css';
 const NavBar = () => {
     const { currentUser } = useContext(UserContext);
     const [show, setShow] = useState(false);
+  const { isCartOpen } = useContext(CartContext);
 
     return (
       <Fragment>
         <div className='navbar'>
             <Link className='logo-container animate__animated animate__backInLeft' to='/'>
-                <PizzacatLogo className='logo' />
+                <SvgIconPizzaCat className='logo' />
             </Link>
             <div className='nav-links-container'>
               <div className='wrapper'>
@@ -38,8 +43,11 @@ const NavBar = () => {
                     </Link>
                 )}
               </div>
-              <ProfileIcon />
+              <div>
+                <CartIcon />
+              </div>
             </div>
+            {isCartOpen && <CartDropdown />}
         </div>
 
                 {/* The bootstrap component - Alert when signed out */}

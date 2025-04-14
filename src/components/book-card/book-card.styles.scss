@@ -43,8 +43,14 @@ $niceblue: #2C5364;
 
   .bookbutton {
     display: flex;
+    border-radius: 15px;
     margin: 5px;
     justify-content: center;
+  }
+
+  .goodreadslogo {
+    display: flex;
+    
   }
 
 }

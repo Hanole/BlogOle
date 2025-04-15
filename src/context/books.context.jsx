@@ -1,17 +1,28 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
-import BOOKS from '../book-data.json';
-
-
+import { getBooksAndDocuments } from "../utils/firebase/firebase.utils";
 
 export const BooksContext = createContext({
-    books: []
+    booksMap: {},
 });
 
-export const BooksProvider = ({children}) => {
-    const [books, setBooks] = useState(BOOKS);
-    const value = {books}
-    return (
-        <BooksContext.Provider value={value}> {children} </BooksContext.Provider>
-    )
-}
+export const BooksProvider = ({ children }) => {
+  const [booksMap, setBooksMap] = useState({});
+
+  useEffect(() => {
+    const getBooksMap = async () => {
+      const booksMap = await getBooksAndDocuments();
+      console.log(booksMap)
+      setBooksMap(booksMap);
+    };
+
+    getBooksMap();
+  }, [])
+
+  const value = { booksMap };
+  return (
+    <BooksContext.Provider value={value}>
+      {children}
+    </BooksContext.Provider>
+  );
+};

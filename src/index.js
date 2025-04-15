@@ -5,24 +5,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { UserProvider } from './context/user.context';
 import { BooksProvider } from './context/books.context';
 import { CartProvider } from './context/cart.context';
-import { ProductsProvider } from './context/products.context';
+import { CategoriesProvider } from './context/categories.context';
 
 import './index.scss';
 import App from './App';
-import Book from './routes/books/book.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CategoriesProvider>
         <BooksProvider>
           <CartProvider>
            <App />
           </CartProvider>
         </BooksProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

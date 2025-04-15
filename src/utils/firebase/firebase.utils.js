@@ -9,7 +9,7 @@ import {
   onAuthStateChanged
 } from 'firebase/auth';
 
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyCJkNpoLe3aFVLU0YIjfpiFr_S34CTUQNo",
@@ -33,6 +33,43 @@ const firebaseConfig = {
   export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
 
   export const db = getFirestore();
+
+  export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+    const collectionRef = collection(db, collectionKey);
+    const batch = writeBatch(db);
+
+    objectsToAdd.forEach((object) => {
+      const docRef = doc(collectionRef, object.title.toLowerCase());
+      batch.set(docRef, object);
+    })
+
+    await batch.commit();
+    console.log('done')
+  }
+
+  // Reusable function to get documents from any collection
+export const getDocumentsFromCollection = async (collectionName) => {
+  const collectionRef = collection(db, collectionName);
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  return querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+};
+
+// Function to get categories
+export const getCategoriesAndDocuments = async () => {
+  return getDocumentsFromCollection('categories');
+};
+
+// Function to get books
+export const getBooksAndDocuments = async () => {
+  return getDocumentsFromCollection('books');
+};
+
 
   export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
     if(!userAuth) return;

@@ -1,6 +1,6 @@
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     grid-gap: 25px;
     align-items: center;
     margin: 10px;
@@ -17,3 +17,5 @@ h1 {
     text-align: center;
     position: relative;
   }
+
+  

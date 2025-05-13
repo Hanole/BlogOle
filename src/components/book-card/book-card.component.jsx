@@ -11,25 +11,23 @@ const BookCard = ({ book }) => {
       };
 
     return (
-    <article className='book-wrapper'>
-    <div className='book-card-container'>
-        <figure>
-            <img src={imageUrl} alt={`${title}`} />
-        </figure>
-        <div className='book-card-info'>
-            <h2 className='title'>{title}</h2>
-            <p>{pages}</p>
+        <div className='book-wrapper'>
+            <div className='book-card-container'>
+                <img src={imageUrl} alt={`${title}`} />
+                <div className='book-card-info'>
+                    <h2 className='title'>{title}</h2>
+                    <p>{pages}</p>
+                </div>
+                <div className="bookbutton">
+                    <Button buttonType='inverted' onClick={openGoodreads}>
+                    <span className='goodreads-container'>
+                        <FaGoodreads style={{ fontSize: '1.5rem', color: '#6D4C41', marginRight: '8px' }} />
+                        </span>
+                    GoodReads
+                    </Button>
+                </div>
+            </div>
         </div>
-        <div className="bookbutton">
-            <Button buttonType='inverted' onClick={openGoodreads}>
-            <span className='goodreads-container'>
-                <FaGoodreads style={{ fontSize: '1.5rem', color: '#6D4C41', marginRight: '8px' }} />
-            </span>
-            GoodReads
-            </Button>
-        </div>
-    </div>
-    </article>
     )
 }
 

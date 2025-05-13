@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component.jsx';
 
 
 
@@ -93,17 +93,10 @@ const SignInForm = () => {
                     name='password' 
                     value={password} />
                 <div className='buttons-container'>
-                <Button 
-                    buttonType='' 
-                    type="submit">
-                        Sign in
-                </Button>
-                <Button
-                    type='button' 
-                    onClick={signInWithGoogle} 
-                    buttonType='google'>
+                    <Button type="submit">Sign in</Button>
+                    <Button buttonType={BUTTON_TYPE_CLASSES.google} type='button' onClick={signInWithGoogle}>
                         Google sign in
-                </Button>
+                    </Button>
                 </div>
                 <p style={{ padding: 50 }}>This function doesn't really make sense to have, but it is functioning</p>
             </form>

@@ -6,6 +6,9 @@ import { UserProvider } from './context/user.context';
 import { BooksProvider } from './context/books.context';
 import { CartProvider } from './context/cart.context';
 import { CategoriesProvider } from './context/categories.context';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './theme/theme';
+import GlobalStyle from './theme/GlobalStyle';
 
 import './index.scss';
 import App from './App';
@@ -13,17 +16,20 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <CategoriesProvider>
-        <BooksProvider>
-          <CartProvider>
-           <App />
-          </CartProvider>
-        </BooksProvider>
-        </CategoriesProvider>
-      </UserProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <BrowserRouter>
+        <UserProvider>
+          <CategoriesProvider>
+          <BooksProvider>
+            <CartProvider>
+            <App />
+            </CartProvider>
+          </BooksProvider>
+          </CategoriesProvider>
+        </UserProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

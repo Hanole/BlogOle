@@ -1,7 +1,15 @@
 
 import { Outlet, Link } from 'react-router';
 import { Fragment, useContext, useState } from 'react';
-import './navigation.styles.scss';
+import {
+  NavbarContainer,
+  LogoContainer,
+  Logo,
+  NavLinksContainer,
+  HanoleText,
+  Wrapper,
+  Button1
+} from './navigation.styles.jsx';
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
@@ -26,29 +34,29 @@ const NavBar = () => {
 
     return (
       <Fragment>
-        <div className='navbar'>
-            <Link className='logo-container animate__animated animate__backInLeft' to='/'>
-                <SvgIconPizzaCat className='logo' />
-            </Link>
-            <div className='nav-links-container'>
-              <div className='wrapper'>
-                <Link className='nav-link button1' to='/about-me'>
+        <NavbarContainer>
+            <LogoContainer as={Link} className='animate__animated animate__backInLeft' to='/'>
+                <Logo />
+            </LogoContainer>
+            <NavLinksContainer>
+              <Wrapper>
+                <Button1 as={Link} to='/about-me'>
                     ABOUT ME
-                </Link>
+                </Button1>
                 {currentUser ? (
                     <SignOutButton setShow={setShow}/>
                 ) : (
-                    <Link className='nav-link button1' to='/auth'>
+                    <Button1 as={Link} to='/auth'>
                         SIGN IN
-                    </Link>
+                    </Button1>
                 )}
-              </div>
+              </Wrapper>
               <div>
                 <CartIcon />
               </div>
-            </div>
+            </NavLinksContainer>
             {isCartOpen && <CartDropdown />}
-        </div>
+        </NavbarContainer>
 
                 {/* The bootstrap component - Alert when signed out */}
         {show && (

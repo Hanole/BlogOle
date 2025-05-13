@@ -1,5 +1,7 @@
 import { auth, signOutUser } from '../../utils/firebase/firebase.utils';
 
+import { SignOutButton1 } from './signout-button.styles';
+
 const SignOutButton = ({ setShow }) => {
   const handleSignOut = async () => {
     try {
@@ -10,7 +12,7 @@ const SignOutButton = ({ setShow }) => {
     }
   };
 
-  return <span className="nav-link button1" onClick={handleSignOut}>SIGN OUT</span>;
+  return <SignOutButton1 onClick={handleSignOut}>SIGN OUT</SignOutButton1>;
 };
 
 

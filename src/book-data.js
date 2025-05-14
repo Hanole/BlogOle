@@ -113,7 +113,23 @@ const BOOKS = [
         imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333578861i/67896.jpg",
         pages: 107,
         url: "https://www.goodreads.com/book/show/67896"
-      }
+      },
+      {
+        id: 15,
+        title: "The Hobbit: Or There and Back Again",
+        author: "Tolkien, J.R.R.",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1384803986i/18660286.jpg",
+        pages: 322,
+        url: "https://www.goodreads.com/book/show/18660286-the-hobbit"
+      },
+      {
+        id: 16,
+        title: "Mythos: The Greek Myths Retold",
+        author: "Stephen Fry",
+        imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1502518360i/35074096.jpg",
+        pages: 416,
+        url: "https://www.goodreads.com/book/show/35074096-mythos"
+      },
     ],
   },
 ]

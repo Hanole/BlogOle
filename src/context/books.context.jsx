@@ -12,7 +12,6 @@ export const BooksProvider = ({ children }) => {
   useEffect(() => {
     const getBooksMap = async () => {
       const booksMap = await getBooksAndDocuments();
-      console.log(booksMap)
       setBooksMap(booksMap);
     };
 

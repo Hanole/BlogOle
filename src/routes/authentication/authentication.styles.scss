@@ -1,6 +1,19 @@
 .authentication-container {
     display: flex;
-    width: 900px;
+    position: relative;
+    width: 60%;
+    // min-width: 900px;
     justify-content: space-between;
-    margin: 30px auto;
+    box-shadow: 0px 4px 4px rgba(0,0,0, 0.2);
+    margin: auto;
+    color: black;
+    padding: 2rem;
+    top: 120px;
+}
+
+@media (max-width: 1200px) {
+    .authentication-container {
+        flex-direction: column;
+    }
+    
 }

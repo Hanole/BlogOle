@@ -7,7 +7,7 @@ const mainColor2 = 'white';
 const shrinkLabelStyles = css`
     top: -20px; 
     font-size: 12px; 
-    color: ${mainColor2};
+    color: ${mainColor};
 `
 
 export const FormInputLabel = styled.label`
@@ -25,7 +25,7 @@ export const Input = styled.input`
         background: none; 
         background-color: white; 
         color: ${subColor}; 
-        font-size: 18px; 
+        font-size: px; 
         padding: 10px 10px 10px 5px; 
         display: block; 
         width: 100%; 

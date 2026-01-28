@@ -1,19 +1,22 @@
 .category-preview-container { 
     display: flex; 
     flex-direction: column; 
-    margin-bottom: 30px; 
+    margin: auto; 
+    max-width: 1440px;
+    padding: 1rem 0;
     
     .title { 
         font-size: 28px; 
         margin-bottom: 25px; 
         cursor: pointer; 
+        color: #22223B;
     } 
 
     a {
         background-image: linear-gradient(
           to right,
-          white,
-          white 50%
+          #22223B,
+          #22223B 50%
         );
         background-size: 200% 100%;
         background-position: -100%;
@@ -52,6 +55,6 @@
     .preview { 
         display: grid; 
         grid-template-columns: repeat(4, minmax(200px, 1fr));
-        column-gap: 20px; 
+        column-gap: 1rem; 
     } 
 }

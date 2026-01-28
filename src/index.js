@@ -9,6 +9,9 @@ import { CategoriesProvider } from './context/categories.context';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme/theme';
 import GlobalStyle from './theme/GlobalStyle';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+
 
 import './index.scss';
 import App from './App';
@@ -16,20 +19,20 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <BrowserRouter>
-        <UserProvider>
-          <CategoriesProvider>
-          <BooksProvider>
-            <CartProvider>
-            <App />
-            </CartProvider>
-          </BooksProvider>
-          </CategoriesProvider>
-        </UserProvider>
-      </BrowserRouter>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <BrowserRouter>
+            <CategoriesProvider>
+            <BooksProvider>
+              <CartProvider>
+              <App />
+              </CartProvider>
+            </BooksProvider>
+            </CategoriesProvider>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
 

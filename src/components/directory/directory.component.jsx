@@ -5,39 +5,39 @@ import './directory.styles.scss';
 const categories = [
     {
       "id": 1,
-      "title": "Shop",
-      "imageUrl": "https://images.pexels.com/photos/3777876/pexels-photo-3777876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Men",
+      "imageUrl": "https://images.unsplash.com/photo-1613053340702-e6df1fb10b34?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "direct": 'shop'
     },
     {
       "id": 2,
-      "title": "Books",
-      "imageUrl": "https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "direct": 'books'
+      "title": "Women",
+      "imageUrl": "https://images.unsplash.com/photo-1759229874914-c1ffdb3ebd0c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "direct": 'women'
     },
     {
       "id": 3,
-      "title": "Films and TV",
-      "imageUrl": "https://images.pexels.com/photos/2398354/pexels-photo-2398354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Barn",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1693242804074-20a78966f4e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWwlMjBraWR8ZW58MHx8MHx8fDA%3D",
       "direct": 'films-and-tv'
     },
     {
       "id": 4,
-      "title": "Philosophy",
-      "imageUrl": "https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-fresco-159862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "New arrivals",
+      "imageUrl": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "direct": 'philosophy'
     },
     {
       "id": 5,
-      "title": "Music",
-      "imageUrl": "https://images.pexels.com/photos/1436141/pexels-photo-1436141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Collections",
+      "imageUrl": "https://images.pexels.com/photos/6627106/pexels-photo-6627106.jpeg",
       "direct": 'music'
     },
     {
       "id": 6,
-      "title": "Hanole & Friends",
-      "imageUrl": "https://images.pexels.com/photos/3348489/pexels-photo-3348489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "direct": 'friends'
+      "title": "About us",
+      "imageUrl": "https://images.pexels.com/photos/5418897/pexels-photo-5418897.jpeg",
+      "direct": 'about-us'
     }
   ]
 

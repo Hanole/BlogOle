@@ -1,14 +1,15 @@
 .category-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
+    column-gap: 1rem;
     row-gap: 50px;
-
-    
+    max-width: 1440px;
+    margin: auto;
 }
 
 .category-title {
     font-size: 38px;
     margin-bottom: 25px;
     text-align: center;
+    color: #22223B;
 }

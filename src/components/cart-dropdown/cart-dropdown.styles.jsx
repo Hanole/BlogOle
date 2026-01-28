@@ -9,24 +9,22 @@ import { BaseButton, InvertedButton, GoogleSignInButton } from '../button/button
 export const CartDropdownContainer = styled.div`
     position: absolute;
     flex-direction: column;
-    width: 240px;
+    width: 340px;
     height: 340px;
     display: flex;
     padding: 20px;
-    background: linear-gradient(90deg, var(--niceblue) -20%, var(--nicebrown) 50%, var(--base-color) 125%);
-    top: 90px;
+    top: 80px;
     right: 0px;
     z-index: 5;
-    border-radius: 10px;
+    border-bottom-left-radius: 8px;
     opacity: 0.95;
-
-    border-top: 2px solid blueviolet;
-    border-left: 2px solid blueviolet;
-    border-bottom: 2px solid rgb(238, 103, 238);
-    border-right: 2px solid rgb(238, 103, 238);
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-    rgba(240, 46, 170, 0.2) 15px 15px;
-
+    box-shadow:
+    rgba(74, 78, 105, 0.4) 0px 5px,
+    rgba(154, 140, 152, 0.3) 0px 10px,
+    rgba(201, 173, 167, 0.2) 0px 15px;
+    color: black;
+    background-color: rgba(74, 78, 105, 0.5);
+    backdrop-filter: blur(10px);
     transition: opacity 0.3s ease-in-out;
 
     ${BaseButton}, 

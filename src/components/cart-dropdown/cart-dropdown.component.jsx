@@ -2,6 +2,7 @@ import Button from '../button/button.component';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router';
 import { CartContext } from '../../context/cart.context';
+import { CategoriesContext } from '../../context/categories.context.jsx';
 
 import { CartDropdownContainer, CartItems, EmptyMessage} from './cart-dropdown.styles.jsx'
 import CartItem from '../cart-item/cart-item.component';
@@ -10,6 +11,8 @@ import CartItem from '../cart-item/cart-item.component';
 const CartDropdown = () => {
     const { cartItems, setIsCartOpen } = useContext(CartContext);
     const navigate = useNavigate();
+    const { categoriesMap } = useContext(CategoriesContext);
+    console.log(categoriesMap);
 
     const goToCheckoutHandler = () => {
         setIsCartOpen(false); 

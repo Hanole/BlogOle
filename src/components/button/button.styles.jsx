@@ -3,19 +3,18 @@ import styled from 'styled-components';
 
 
 export const BaseButton = styled.button`
-    min-width: 165px; 
     width: auto; 
-    height: 50px; 
-    letter-spacing: 0.5px; 
-    line-height: 50px; 
-    padding: 0 35px 0 35px; 
-    font-size: 15px; 
+    height: 48px;
+    line-height: 3.5rem; 
+    padding: 0 2rem; 
+    align-items: center;
+    font-size: 16px; 
     background-color: black; 
     color: white; 
     text-transform: uppercase; 
-    font-family: 'Open Sans Condensed'; 
     font-weight: bolder; 
     border: none; 
+    border-radius: 8px;
 
     cursor: pointer; 
     display: flex; 

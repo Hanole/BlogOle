@@ -7,7 +7,7 @@ const categories = [
       "id": 1,
       "title": "Men",
       "imageUrl": "https://images.unsplash.com/photo-1613053340702-e6df1fb10b34?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "direct": 'shop'
+      "direct": 'men'
     },
     {
       "id": 2,
@@ -19,19 +19,19 @@ const categories = [
       "id": 3,
       "title": "Barn",
       "imageUrl": "https://plus.unsplash.com/premium_photo-1693242804074-20a78966f4e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWwlMjBraWR8ZW58MHx8MHx8fDA%3D",
-      "direct": 'films-and-tv'
+      "direct": 'barn'
     },
     {
       "id": 4,
       "title": "New arrivals",
       "imageUrl": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "direct": 'philosophy'
+      "direct": 'new-arrivals'
     },
     {
       "id": 5,
       "title": "Collections",
       "imageUrl": "https://images.pexels.com/photos/6627106/pexels-photo-6627106.jpeg",
-      "direct": 'music'
+      "direct": 'collections'
     },
     {
       "id": 6,
